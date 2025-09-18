@@ -18,6 +18,14 @@ df <- read.csv("datasets/fictional_data.csv")
 
 Give a brief introduction of the research question(s), and how you will answer them.
 
+#### Research Question -----------
+# Is there a relationship between education and income?
+
+# Selection of variables
+# a. Education: University level education in years
+# b. Income: Monthly net income
+# c. Capital: Whether the person lives in capital or not
+
 ## Data
 
 Import the data and describe it. Include below a brief written interpretation. 
@@ -25,6 +33,13 @@ Import the data and describe it. Include below a brief written interpretation.
 ```{r}
 # Load data 
 df <- read.csv("datasets/fictional_data.csv")
+
+
+#lets look at the data
+
+View(df)
+str(df)
+?str
 ```
 
 ## Analysis
@@ -34,6 +49,12 @@ Describe how you analysed the data. You can embed R outputs directly in your tex
 Present a relevant visualization for the distribution of income. 
 
 ```{r}
+hist(df$income) # Distribution
+mean(df$income) # Central tendency, mean
+var(df$income) # Variability, variance
+sd(df$income) # Variability, standard deviation
+sd(df$income)/sqrt(length((df$income))) # Variability, standard **error**
+
 
 ```
 
